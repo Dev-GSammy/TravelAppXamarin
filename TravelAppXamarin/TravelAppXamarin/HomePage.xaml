@@ -3,8 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:local="clr-namespace:TravelAppXamarin"
              x:Class="TravelAppXamarin.HomePage">
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="ADD"
+                     Clicked="ToolbarItem_Clicked"/>
+    </TabbedPage.ToolbarItems>
     <!--The Namespace has to be declared locally before the pages created for tabs will be identified-->
     <local:HistoryPage Title="History"/>
     <local:MapsPage Title="Maps"/>
     <local:ProfilePage Title="Profile"/>
-</TabbedPage>
+</TabbedPage>  
