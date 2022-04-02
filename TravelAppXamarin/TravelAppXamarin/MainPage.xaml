@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TravelAppXamarin.MainPage">
+
+    <StackLayout VerticalOptions="Center">
+        <Entry x:Name="NameEntry" 
+               Placeholder="Enter Name Here" 
+               Margin="20" 
+               Keyboard="Chat" />
+        <Entry x:Name="Password" 
+               Placeholder="Enter Password Here" 
+               IsPassword="True" 
+               Keyboard="Email" 
+               Margin="20" />
+        <Button x:Name="Submitbtn" 
+                Clicked="Submitbtn_Clicked"
+                Text="SUBMIT ENTRY" 
+                Margin="20" Padding="10" 
+                VerticalOptions="Center" 
+                BackgroundColor="Blue"
+                TextColor="White"/>
+    </StackLayout>
+
+</ContentPage>
