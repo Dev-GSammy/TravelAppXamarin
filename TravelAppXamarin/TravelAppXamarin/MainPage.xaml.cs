@@ -25,7 +25,7 @@ namespace TravelAppXamarin
             }
             else
             {
-
+                Navigation.PushAsync(new HomePage());
             }
         }
     }
