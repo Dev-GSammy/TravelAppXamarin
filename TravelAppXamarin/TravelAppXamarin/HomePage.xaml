@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:local="clr-namespace:TravelAppXamarin"
              x:Class="TravelAppXamarin.HomePage">
+    <!--The tool bar item is for adding a button or a text in the toolbar that appears for navigation.-->
     <TabbedPage.ToolbarItems>
         <ToolbarItem Text="ADD"
                      Clicked="ToolbarItem_Clicked"/>

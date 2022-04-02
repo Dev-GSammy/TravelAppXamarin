@@ -18,8 +18,7 @@
                 Text="SUBMIT ENTRY" 
                 Margin="20" Padding="10" 
                 VerticalOptions="Center" 
-                BackgroundColor="Blue"
+                BackgroundColor="{StaticResource blueColor}"
                 TextColor="White"/>
     </StackLayout>
-
 </ContentPage>
