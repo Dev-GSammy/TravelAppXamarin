@@ -3,8 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TravelAppXamarin.App">
     <Application.Resources>
+        <!--ResourceDictionary allows a property to definable to every page as wanted. It allows for code reuse and simplicity. It is possible to declare it in
+        one page only as long as the resource will be used only in that page. We do this by calling the resources of the page. Example for a page
+        called history page, we define it <HistoryPage.Resources> and then call the resource dictionary. Not so hard-->
         <ResourceDictionary>
             <Color x:Key="blueColor">dodgerblue</Color>
+            
+            <!--
+            The section below shows the use of implicit styles.  It is declared like this
+            This section will only work iff there is no definition of the button style in the button's page.
+            For explicit sytle declaration, i.e if we want the style to apply
+            to only some chosen target types, all we have to do is declare a key in the style. eg "x:key="normal" and then call the "<style = "{StaticResource normal}" 
+            at the target page itself.
+            -->
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource blueColor}" />
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
-</Application>
+</Application> 
