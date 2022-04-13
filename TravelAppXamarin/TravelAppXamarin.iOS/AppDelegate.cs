@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-
 using Foundation;
 using UIKit;
 
@@ -23,8 +23,14 @@ namespace TravelAppXamarin.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
 
+            // The next three lines below show the naming of the db, the path creation and the combination of both. Then the passage of parameter into the 
+            //constructor of the app class.
+            string DBname = "TravelApp.sqlite";
+            string PathFolder = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyVideos), "..", "Library");
+            string DbFullPath = Path.Combine(PathFolder, DBname);
+
+            LoadApplication(new App(DbFullPath));
             return base.FinishedLaunching(app, options);
         }
     }
