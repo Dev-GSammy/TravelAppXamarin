@@ -27,7 +27,7 @@ namespace TravelAppXamarin.iOS
             // The next three lines below show the naming of the db, the path creation and the combination of both. Then the passage of parameter into the 
             //constructor of the app class.
             string DBname = "TravelApp.sqlite";
-            string PathFolder = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyVideos), "..", "Library");
+            string PathFolder = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "..", "Library");
             string DbFullPath = Path.Combine(PathFolder, DBname);
 
             LoadApplication(new App(DbFullPath));
