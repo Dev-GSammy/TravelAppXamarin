@@ -17,6 +17,7 @@ namespace TravelAppXamarin.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Xamarin.FormsMaps.Init(this, savedInstanceState);
 
             // The next three lines below show the naming of the db, the path creation and the combination of both. Then the passage of parameter into the 
             //constructor of the app class.
