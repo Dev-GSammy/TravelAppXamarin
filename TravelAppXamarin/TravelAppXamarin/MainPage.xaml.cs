@@ -22,6 +22,7 @@ namespace TravelAppXamarin
              if (isName || isPassword)
             {
                 NameEntry.Text = "You didn't fill all fields. Try Again!!!";
+                Password.Text = "You are welcome";
             }
             else
             {
