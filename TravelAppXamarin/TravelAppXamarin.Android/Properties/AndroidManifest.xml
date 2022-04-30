@@ -10,6 +10,6 @@
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<application android:label="TravelAppXamarin.Android" android:theme="@style/MainTheme">
 		<!-- This line below must be included: the metadata, android name and api key as the value. This will prevent the map from greying out -->
-		<meta-data android:name="com.google.android.maps.v2.API-KEY" android:value="AIzaSyBEOfxBnu3ORw29NdrGWFY2jZjrW_M-px0" />
+		<meta-data android:name="com.google.android.maps.v2.API-KEY" android:value="AIzaSyBEOfxBnu3ORw29NdrGWFY2jZjrW_M-px0" /> 
 	</application>
 </manifest>
