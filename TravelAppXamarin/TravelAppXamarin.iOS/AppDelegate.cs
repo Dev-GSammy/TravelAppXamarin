@@ -23,7 +23,7 @@ namespace TravelAppXamarin.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            Xamarin.FormsMaps.Init();
+            global::Xamarin.FormsMaps.Init();
 
             // The next three lines below show the naming of the db, the path creation and the combination of both. Then the passage of parameter into the 
             //constructor of the app class.
