@@ -34,7 +34,7 @@
 	<string>TravelAppXamarin</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>New Entry</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We&apos;d need your location to optimize app usage. Thanks.</string>
 </dict>
 </plist>
