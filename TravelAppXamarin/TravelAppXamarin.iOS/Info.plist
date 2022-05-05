@@ -36,5 +36,9 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We&apos;d need your location to optimize app usage. Thanks.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>We need access to your bluetooth for a correct app usage. Thanks</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>We need access to your calendar for a correct app usage.  Thanks.</string>
 </dict>
 </plist>
