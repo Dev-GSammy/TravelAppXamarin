@@ -28,4 +28,4 @@ namespace TravelAppXamarin.Logic
             return venues;
         }
     }
-}
+} 
