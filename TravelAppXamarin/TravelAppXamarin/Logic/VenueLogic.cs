@@ -25,10 +25,7 @@ namespace TravelAppXamarin.Logic
                 var response = await client.GetAsync(url); 
                 var json = await response.Content.ReadAsStringAsync();
             }
-            /*There has been a slight change over here. The version V2 used in the code by Eduardo is no more current
-             * as the endpoint owners have changed it to version v3.
-             * I therefore have to change it now to versioin 3.
-             */
+          
             return venues;
         }
     }
