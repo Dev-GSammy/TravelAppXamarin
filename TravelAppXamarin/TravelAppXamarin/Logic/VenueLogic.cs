@@ -19,13 +19,30 @@ namespace TravelAppXamarin.Logic
         {
             List<Venues> venues = new List<Venues>();   
 
-            var url = Venues.GenerateURL(latitude, longitude); 
+            var url = Venues.GenerateURL(latitude, longitude);
+            /*
             using (HttpClient client = new HttpClient())
             {
                 var response = await client.GetAsync(url); 
                 var json = await response.Content.ReadAsStringAsync();
+            }*/
+
+            var client = new HttpClient();
+            var request = new HttpRequestMessage
+            {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri(url),
+                Headers =
+                    {
+                        { "Accept", "application/json" },
+                    },
+            };
+            using (var response = await client.SendAsync(request))
+            {
+                response.EnsureSuccessStatusCode();
+                var json = await response.Content.ReadAsStringAsync();
             }
-          
+
             return venues;
         }
     }
