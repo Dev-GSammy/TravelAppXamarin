@@ -14,7 +14,7 @@ namespace TravelAppXamarin.Logic
          * located. We then created this folder called Logic where we initialized the class VenueLogic and tried to receive the response from 
          * the endpoint as a List. The method is receiving it as a list. It will then be deserialized into c# object. But I still don't get it.
          */
-
+        public const string API_KEY = "fsq3l+IjJmALewbrD//AmkdoFys1EDhryOXVcfVoeDwoEI8=";
         public async static Task<List<Venues>> GetVenues(double latitude, double longitude)
         {
             List<Venues> venues = new List<Venues>();   
@@ -22,32 +22,33 @@ namespace TravelAppXamarin.Logic
             ///////
             ///
             ///////
-
             var client = new HttpClient();
             var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri("https://api.foursquare.com/v3/places/search"),
+                RequestUri = new Uri(url),
                 Headers =
     {
         { "Accept", "application/json" },
+        { "Authorization", API_KEY },
     },
             };
             using (var response = await client.SendAsync(request))
             {
                 response.EnsureSuccessStatusCode();
-                var body = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(body);
+                var json = await response.Content.ReadAsStringAsync();
+                Console.WriteLine(json);
             }
-
-
+            /////
+            /////
+            ///////
             /*using (HttpClient client = new HttpClient()) 
             {
                 var response = await client.GetAsync(url); 
                 var json = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(json);
-            }*/
-
+            }
+            */
             return venues;
         }
     }
