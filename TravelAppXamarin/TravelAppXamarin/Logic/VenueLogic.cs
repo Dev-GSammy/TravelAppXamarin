@@ -23,7 +23,12 @@ namespace TravelAppXamarin.Logic
             ///
             ///////
             var client = new HttpClient();
-            var request = new HttpRequestMessage
+            HttpRequestMessage request = new HttpRequestMessage();
+            request.Method = HttpMethod.Get;
+            request.RequestUri = new Uri(url);
+            request.Headers.Add("Accept", "application/json");
+            request.Headers.Add("Authorization", API_KEY);
+            /*var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
                 RequestUri = new Uri(url),
@@ -32,7 +37,7 @@ namespace TravelAppXamarin.Logic
         { "Accept", "application/json" },
         { "Authorization", API_KEY },
     },
-            };
+            };*/
             using (var response = await client.SendAsync(request))
             {
                 response.EnsureSuccessStatusCode();
