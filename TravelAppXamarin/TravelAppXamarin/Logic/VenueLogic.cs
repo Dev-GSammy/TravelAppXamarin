@@ -18,30 +18,35 @@ namespace TravelAppXamarin.Logic
         public async static Task<List<Venues>> GetVenues(double latitude, double longitude)
         {
             List<Venues> venues = new List<Venues>();   
-
             var url = Venues.GenerateURL(latitude, longitude);
-            /*
-            using (HttpClient client = new HttpClient())
-            {
-                var response = await client.GetAsync(url); 
-                var json = await response.Content.ReadAsStringAsync();
-            }*/
+            ///////
+            ///
+            ///////
 
             var client = new HttpClient();
             var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri(url),
+                RequestUri = new Uri("https://api.foursquare.com/v3/places/search"),
                 Headers =
-                    {
-                        { "Accept", "application/json" },
-                    },
+    {
+        { "Accept", "application/json" },
+    },
             };
             using (var response = await client.SendAsync(request))
             {
                 response.EnsureSuccessStatusCode();
-                var json = await response.Content.ReadAsStringAsync();
+                var body = await response.Content.ReadAsStringAsync();
+                Console.WriteLine(body);
             }
+
+
+            /*using (HttpClient client = new HttpClient()) 
+            {
+                var response = await client.GetAsync(url); 
+                var json = await response.Content.ReadAsStringAsync();
+                Console.WriteLine(json);
+            }*/
 
             return venues;
         }
