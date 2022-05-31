@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using TravelAppXamarin.Model;
+using 
 
 namespace TravelAppXamarin.Logic
 {
@@ -65,17 +66,18 @@ namespace TravelAppXamarin.Logic
             return venues;
         }*/
         #endregion
-        public async static Task<List<Venues>> GetVenues()
+        public async static Task<List<Address>> GetVenues()
         {
-            List<Venues> venues = new List<Venues>();
-            var url = Venues.GenerateURL();
-            using (HttpClient client = new HttpClient())
+            List<Address> address = new List<Address>();
+            var url = VenueRoot.GenerateURL();
+            using (HttpClient client = new HttpClient()) 
             {
                 var response = await client.GetAsync(url);
                 var json = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(json);
             }
-            return venues;
+            
+            return address;
         }
     }
 } 
