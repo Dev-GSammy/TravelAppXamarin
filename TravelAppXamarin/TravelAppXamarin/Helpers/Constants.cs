@@ -11,7 +11,7 @@ namespace TravelAppXamarin.Helpers
         public const string VENUE_SEARCH = "https://nominatim.openstreetmap.org/?addressdetails=1&q={0}&format=json&limit=1";
         //public const string CLIENT_ID = "XGFMTTYWYXXKAHYHUYPBBAR3TN2H4DXXGBAKDCREP3D0SWGL";
         //public const string CLIENT_SECRET = "44SMGVN4CGAIKITXOEBNPS33JRWTH0ZABWZIB4HGYJQUD55P";
-        public static string query = "Universities+in+Nigeria";
+        public static string query = "List+of+Universities+in+Nigeria";
         //public static string Date = DateTime.Now.ToString("yyyyMMdd");
     }
 }
