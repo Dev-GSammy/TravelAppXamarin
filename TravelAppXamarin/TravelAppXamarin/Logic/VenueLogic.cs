@@ -65,7 +65,17 @@ namespace TravelAppXamarin.Logic
             return venues;
         }*/
         #endregion
-
-
+        public async static Task<List<Venues>> GetVenues()
+        {
+            List<Venues> venues = new List<Venues>();
+            var url = Venues.GenerateURL();
+            using (HttpClient client = new HttpClient())
+            {
+                var response = await client.GetAsync(url);
+                var json = await response.Content.ReadAsStringAsync();
+                Console.WriteLine(json);
+            }
+            return venues;
+        }
     }
 } 

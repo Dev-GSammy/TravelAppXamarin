@@ -10,7 +10,11 @@ namespace TravelAppXamarin.Model
         public static string GenerateURL(double latitude, double longitude)
         {
             //return string.Format(Constants.VENUE_SEARCH, latitude, longitude, Constants.CLIENT_ID, Constants.CLIENT_SECRET, DateTime.Now.ToString("yyyyMMdd"));
-            return string.Format(Constants.VENUE_SEARCH, latitude, longitude,DateTime.Now.ToString("yyyyMMdd"));
+            return string.Format(Constants.VENUE_SEARCH, Constants.query);
+        }
+        public static string GenerateURL()
+        {
+            return string.Format(Constants.VENUE_SEARCH, Constants.query);
         }
     }
 }
