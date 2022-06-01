@@ -26,7 +26,8 @@ namespace TravelAppXamarin
 
             var locator = CrossGeolocator.Current;
             var position = await locator.GetPositionAsync();
-            var address = VenueLogic.GetVenues();
+            var address =  await VenueLogic.GetVenues();
+            addressListView.ItemsSource = address;
             //var venues = VenueLogic.GetVenues(position.Latitude, position.Longitude);
         }
         //The line below is for the event handler of the button created.
