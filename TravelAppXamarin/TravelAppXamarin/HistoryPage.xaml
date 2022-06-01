@@ -8,7 +8,7 @@
         <ListView x:Name="postListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text= "{Binding Experience}"/>
+                    <TextCell Text= "{Binding Experience}" TextColor="DodgerBlue"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
