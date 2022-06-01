@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using TravelAppXamarin.Model;
-using 
+
 
 namespace TravelAppXamarin.Logic
 {
@@ -66,17 +67,56 @@ namespace TravelAppXamarin.Logic
             return venues;
         }*/
         #endregion
+
+        /// <summary>
+        /// The following lines of code could help when trying to get a response that predictionkey and contenttype.
+        /*
+         private async void MakePredictionAsync(string filename)
+        {
+            string url = "https://southcentralus.api.cognitive.microsoft.com/customvision/v3.0/Prediction/d8b32c96-155d-4a73-9be1-f2a59da5364a/classify/iterations/Iteration1/image";
+        string predictionKey = "7b80e3a48c904b34803048bf20b0ad8d";
+        string contentType = "application/octet-stream";
+        var file = File.ReadAllBytes(filename);
+
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("Prediction-Key", predictionKey);
+                using (var content = new ByteArrayContent(file))
+                {
+                    //the namespace system.Net.http was added
+                    try
+                    {
+                        content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(contentType);
+                        var response = await client.PostAsync(url, content);
+
+    //we downloaded the Nuget package Newtonsoft.json
+    var responseString = await response.Content.ReadAsStringAsync();
+
+    List<Prediction> predictions = (JsonConvert.DeserializeObject<CustomVision>(responseString).predictions);
+    predictionsListView.ItemsSource = predictions;
+                    }
+                    catch
+{
+    MessageBox.Show("Unable to connect to internet. Please check your network and try again.");
+    Close();
+}
+                }
+            }
+        }*/
+        
         public async static Task<List<Address>> GetVenues()
         {
             List<Address> address = new List<Address>();
             var url = VenueRoot.GenerateURL();
-            using (HttpClient client = new HttpClient()) 
+            using (HttpClient client = new HttpClient())
             {
                 var response = await client.GetAsync(url);
                 var json = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(json);
+
+                address = JsonConvert.DeserializeObject<Universities>(json).address;
+                
             }
-            
             return address;
         }
     }
