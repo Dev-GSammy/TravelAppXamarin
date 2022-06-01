@@ -23,7 +23,7 @@
                                     <RowDefinition Height="auto"/>
                                 </Grid.RowDefinitions>
                                 <Label Text="{Binding address.amenity}"
-                                       FontAttributes="Bold" TextColor="DodgerBlue"/>
+                                       FontAttributes="Bold" TextColor="White" FontSize="Body"/>
                                 <Label Grid.Row="1" Text="{Binding address.road}" TextColor="DodgerBlue"/>
                                 <Label Grid.Column="1" Grid.Row="1" Text="{Binding address.state}" TextColor="DodgerBlue"/>
                             </Grid>
