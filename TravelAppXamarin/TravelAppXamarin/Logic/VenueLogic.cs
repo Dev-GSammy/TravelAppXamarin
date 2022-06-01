@@ -104,20 +104,20 @@ namespace TravelAppXamarin.Logic
             }
         }*/
         
-        public async static Task<List<Address>> GetVenues()
+        public async static Task<List<Universities>> GetVenues()
         {
-            List<Address> address = new List<Address>();
+            List<Universities> universities = new List<Universities>();
             var url = VenueRoot.GenerateURL();
             using (HttpClient client = new HttpClient())
             {
                 var response = await client.GetAsync(url);
                 var json = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(json);
-
-                address = JsonConvert.DeserializeObject<Universities>(json).address;
-                
+                ///You wouldn't believe that it was copilot that figured out this next line for me. I hope it works.
+                var result = JsonConvert.DeserializeObject<List<Universities>>(json);
+                universities = result;
             }
-            return address;
+            return universities;
         }
     }
 } 
