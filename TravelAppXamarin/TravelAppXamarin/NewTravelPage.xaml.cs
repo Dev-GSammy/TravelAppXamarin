@@ -9,12 +9,12 @@ using TravelAppXamarin.Logic;
 using TravelAppXamarin.Model;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
 namespace TravelAppXamarin
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewTravelPage : ContentPage
     {
+        //Model.Address Address { get; set; }
         public NewTravelPage()
         {
             InitializeComponent();

@@ -9,7 +9,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Entry Margin="10,20" x:Name="ExperienceEntry" Placeholder="Write Your Experience" />
-            <ListView x:Name="addressListView" HorizontalOptions="FillAndExpand">
+            <ListView x:Name="addressListView" HorizontalOptions="FillAndExpand" Margin="20,10">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -22,7 +22,10 @@
                                     <RowDefinition Height="*"/>
                                     <RowDefinition Height="auto"/>
                                 </Grid.RowDefinitions>
-                                
+                                <Label Text="{Binding address.amenity}"
+                                       FontAttributes="Bold" TextColor="DodgerBlue"/>
+                                <Label Grid.Row="1" Text="{Binding address.road}" TextColor="DodgerBlue"/>
+                                <Label Grid.Column="1" Grid.Row="1" Text="{Binding address.state}" TextColor="DodgerBlue"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
