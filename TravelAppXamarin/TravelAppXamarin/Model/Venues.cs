@@ -18,7 +18,7 @@ namespace TravelAppXamarin.Model
     }
 
         public class Universities
-{
+        {
         public int place_id { get; set; }
         public string licence { get; set; }
         public string osm_type { get; set; }
@@ -31,12 +31,10 @@ namespace TravelAppXamarin.Model
         public string type { get; set; }
         public double importance { get; set; }
         public string icon { get; set; }
-        public List<Address> address { get; set; }
-
-    }
+        }
     public class VenueRoot
     {
-        
+        public Address address { get; set; }
         public static string GenerateURL(double latitude, double longitude)
         {
             //return string.Format(Constants.VENUE_SEARCH, latitude, longitude, Constants.CLIENT_ID, Constants.CLIENT_SECRET, DateTime.Now.ToString("yyyyMMdd"));
