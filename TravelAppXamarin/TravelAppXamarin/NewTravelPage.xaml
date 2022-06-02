@@ -24,7 +24,7 @@
                                 </Grid.RowDefinitions>
                                 <!--Well, it's getting quite successful. I have finished implementing the page UI -->
                                 <Label Text="{Binding address.amenity}"
-                                       FontAttributes="Bold" TextColor="White" FontSize="Body" HorizontalOptions="FillAndExpand"/>
+                                       FontAttributes="Bold" TextColor="White" FontSize="Body"/>
                                 <Label Grid.Row="1" Text="{Binding address.road}" TextColor="DodgerBlue"/>
                                 <Label Grid.Column="1" Grid.Row="1" Text="{Binding address.state}" TextColor="DodgerBlue"/>
                             </Grid>
@@ -32,7 +32,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
