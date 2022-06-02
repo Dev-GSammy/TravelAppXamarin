@@ -117,6 +117,7 @@ namespace TravelAppXamarin.Logic
                 var result = JsonConvert.DeserializeObject<List<VenueRoot>>(json); // It worked. Yayyyyyyy
                 address = result;
             }
+            Console.WriteLine("Address of the listview has been gotten");
             return address ;
         }
     }

@@ -27,6 +27,7 @@ namespace TravelAppXamarin
             var locator = CrossGeolocator.Current;
             var position = await locator.GetPositionAsync();
             var address =  await VenueLogic.GetVenues();
+            Console.WriteLine("It has been loaded into the listview page");
             addressListView.ItemsSource = address;
             //var venues = VenueLogic.GetVenues(position.Latitude, position.Longitude);
         }
