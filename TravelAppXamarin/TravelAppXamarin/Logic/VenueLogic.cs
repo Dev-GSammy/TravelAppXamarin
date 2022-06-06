@@ -114,7 +114,7 @@ namespace TravelAppXamarin.Logic
                 var json = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(json);
                 ///You wouldn't believe that it was copilot that figured out this next line for me. I hope it works.
-                var result = JsonConvert.DeserializeObject<List<VenueRoot>>(json); // It worked. Yayyyyyyy
+                var result = JsonConvert.DeserializeObject<List<VenueRoot>>(json); // It worked. Yayyyyyyyy
                 address = result;
             }
             Console.WriteLine("Address of the listview has been gotten");
