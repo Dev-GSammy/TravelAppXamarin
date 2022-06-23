@@ -15,9 +15,8 @@ namespace TravelAppXamarin.Model
 
         public string AddressAmenity { get; set; }
         public string AddressRoad { get; set; }
-        public string AddressTown { get; set; }
         public string AddressState { get; set; }
-        public double UniversityLongitude { get; set; }
-        public double UniversityLatitude { get; set; }
+        public string UniversityLongitude { get; set; }
+        public string UniversityLatitude { get; set; }
     }
 }

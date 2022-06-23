@@ -35,13 +35,18 @@ namespace TravelAppXamarin
         private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
             var SelectedVenue = addressListView.SelectedItem as Address;
-            //var firstCategory = SelectedVenue.
+            var SelectedUniversity = addressListView.SelectedItem as Universities;
+            
             //the object created is used to pass and create a new table titled post into the database. with the column experience
             //The id is created automatically since we already made it autoincrement
             Post post = new Post()
             {
-                Experience = ExperienceEntry.Text
-                
+                Experience = ExperienceEntry.Text,
+                AddressAmenity = SelectedVenue.amenity,
+                AddressRoad = SelectedVenue.road,
+                AddressState = SelectedVenue.state,
+                UniversityLatitude = SelectedUniversity.lat,
+                UniversityLongitude = SelectedUniversity.lon
             };
             bool ifempty = string.IsNullOrEmpty(ExperienceEntry.Text);
             //The following lines first creates a connection to the database location already called.
