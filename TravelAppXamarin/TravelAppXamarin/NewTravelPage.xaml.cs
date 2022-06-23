@@ -48,8 +48,8 @@ namespace TravelAppXamarin
                     AddressAmenity = SelectedVenue.amenity,
                     AddressRoad = SelectedVenue.road,
                     AddressState = SelectedVenue.state,
-                    UniversityLatitude = SelectedUniversity.lat,
-                    UniversityLongitude = SelectedUniversity.lon
+                    //UniversityLatitude = SelectedUniversity.lat,
+                    //UniversityLongitude = SelectedUniversity.lon
                 };
                 bool ifempty = string.IsNullOrEmpty(ExperienceEntry.Text);
                 //The following lines first creates a connection to the database location already called.
