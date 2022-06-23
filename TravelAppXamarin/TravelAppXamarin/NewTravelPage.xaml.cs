@@ -74,11 +74,11 @@ namespace TravelAppXamarin
             }
             catch(NullReferenceException nre)
             {
-
+                DisplayAlert("New NRE error", nre.Message, "Uh, Okay.");
             }
             catch(Exception ex)
             {
-
+                DisplayAlert("New EX error", ex.Message, "Uh, Okay.");
             }
         }
 
