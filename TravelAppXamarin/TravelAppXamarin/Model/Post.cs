@@ -12,5 +12,12 @@ namespace TravelAppXamarin.Model
 
         [MaxLength(250)]
         public string Experience { get; set; }
+
+        public string AddressAmenity { get; set; }
+        public string AddressRoad { get; set; }
+        public string AddressTown { get; set; }
+        public string AddressState { get; set; }
+        public double UniversityLongitude { get; set; }
+        public double UniversityLatitude { get; set; }
     }
 }

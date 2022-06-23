@@ -19,7 +19,7 @@ namespace TravelAppXamarin
         {
             InitializeComponent();
         }
-
+        
         protected override async void OnAppearing()
         {
             base.OnAppearing();
@@ -34,11 +34,14 @@ namespace TravelAppXamarin
         //The line below is for the event handler of the button created.
         private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
+            var SelectedVenue = addressListView.SelectedItem as Address;
+            //var firstCategory = SelectedVenue.
             //the object created is used to pass and create a new table titled post into the database. with the column experience
             //The id is created automatically since we already made it autoincrement
             Post post = new Post()
             {
                 Experience = ExperienceEntry.Text
+                
             };
             bool ifempty = string.IsNullOrEmpty(ExperienceEntry.Text);
             //The following lines first creates a connection to the database location already called.
