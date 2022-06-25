@@ -37,8 +37,12 @@ namespace TravelAppXamarin
         {
             try
             {
-                var SelectedVenue = addressListView.SelectedItem as List<Address>;
-                var SelectedUniversity = addressListView.SelectedItem;
+                //List<VenueRoot> SelectedVenue = new List<VenueRoot>();
+                //var SelectedVenue = addressListView.SelectedItem as Address;
+                //var datareceived = SelectedVenue.amenity.ToString();
+                //List<string> selectedvenue = new List<string>(SelectedVenue);
+                var selectedVenue = addressListView.SelectedItem as VenueRoot;
+                var datacollected = selectedVenue.address;
 
                 //the object created is used to pass and create a new table titled post into the database. with the column experience
                 //The id is created automatically since we already made it autoincrement
@@ -46,8 +50,8 @@ namespace TravelAppXamarin
                 {
 
                     Experience = ExperienceEntry.Text,
-                    //AddressAmenity = SelectedVenue.amenity,
-                    //AddressRoad = SelectedVenue.road.ToString(),
+                    //AddressAmenity =
+                    AddressAmenity = datacollected.amenity,
                     //AddressState = SelectedVenue.state.ToString(),
                     //AddressCountry = SelectedVenue.Country.ToString()
                 };

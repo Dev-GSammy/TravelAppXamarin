@@ -30,7 +30,6 @@ namespace TravelAppXamarin
                 var posts = conn.Table<Post>().ToList();
                 postListView.ItemsSource = posts;
             }
-                
         }
     }
 }
