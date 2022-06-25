@@ -44,12 +44,13 @@ namespace TravelAppXamarin
                 //The id is created automatically since we already made it autoincrement
                 Post post = new Post()
                 {
+                   
                     Experience = ExperienceEntry.Text,
-                    AddressAmenity = SelectedVenue.amenity,
-                    AddressRoad = SelectedVenue.road,
-                    AddressState = SelectedVenue.state,
-                    //UniversityLatitude = SelectedUniversity.lat,
-                    //UniversityLongitude = SelectedUniversity.lon
+                    AddressAmenity = SelectedVenue.amenity.ToString(),
+                    AddressRoad = SelectedVenue.road.ToString(),
+                    AddressState = SelectedVenue.state.ToString(),
+                    UniversityLatitude = SelectedUniversity.lat.ToString(),
+                    UniversityLongitude = SelectedUniversity.lon.ToString()
                 };
                 bool ifempty = string.IsNullOrEmpty(ExperienceEntry.Text);
                 //The following lines first creates a connection to the database location already called.
@@ -75,10 +76,12 @@ namespace TravelAppXamarin
             catch(NullReferenceException nre)
             {
                 DisplayAlert("New NRE error", nre.Message, "Uh, Okay.");
+                Console.WriteLine(nre.Message);
             }
             catch(Exception ex)
             {
                 DisplayAlert("New EX error", ex.Message, "Uh, Okay.");
+                Console.WriteLine(ex.Message);
             }
         }
 
