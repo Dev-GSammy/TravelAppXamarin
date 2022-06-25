@@ -107,6 +107,9 @@ namespace TravelAppXamarin.Logic
         
         public async static Task<List<VenueRoot>> GetVenues()
         {
+            //I'm done requesting from this particular api jare. it's frustrating me. Can you imagine a request not being sent 
+            //all when I connect to the internet. It's delaying my getting of the pins on the map I created. I'm off it. 
+            //Thank you, Eduardo.
             List<VenueRoot> address = new List<VenueRoot>();
             var url = VenueRoot.GenerateURL();
             using (HttpClient client = new HttpClient())
