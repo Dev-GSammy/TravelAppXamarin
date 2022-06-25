@@ -13,6 +13,11 @@ namespace TravelAppXamarin
         public MainPage()
         {
             InitializeComponent();
+
+            var assembly = typeof(MainPage);
+
+            MainIcon.Source = ImageSource.FromResource("TravelAppXamarin.Assets.Images.plane.png", assembly);
+
         }
 
         private void Submitbtn_Clicked(object sender, EventArgs e)
