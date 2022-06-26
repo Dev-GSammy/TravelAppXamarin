@@ -5,6 +5,14 @@
 
     
     <StackLayout VerticalOptions="Center">
+        <Label Text="Your Favourite Travel App"
+               FontFamily="Times New Romans"
+               FontAttributes="Italic"
+               FontSize="Large"
+               Margin="0,0,0,10"
+               HorizontalTextAlignment="Center"
+               TextColor="DodgerBlue"
+               />
         <Image x:Name="MainIcon"
                Aspect="AspectFit"
                HorizontalOptions="FillAndExpand"
