@@ -5,11 +5,14 @@
              x:Class="TravelAppXamarin.HomePage">
     <!--The tool bar item is for adding a button or a text in the toolbar that appears for navigation.-->
     <TabbedPage.ToolbarItems>
-        <ToolbarItem Text="ADD"
+        <ToolbarItem Text="ADD" IconImageSource="add.png"
                      Clicked="ToolbarItem_Clicked"/>
     </TabbedPage.ToolbarItems>
     <!--The Namespace has to be declared locally before the pages created for tabs will be identified-->
-    <local:HistoryPage Title="History"/>
-    <local:MapsPage Title="Maps"/>
-    <local:ProfilePage Title="Profile"/>
+    <local:HistoryPage Title="History"
+                       IconImageSource="home.png"/>
+    <local:MapsPage Title="Maps"
+                    IconImageSource="map.png"/>
+    <local:ProfilePage Title="Profile"
+                       IconImageSource="profile.png"/>
 </TabbedPage>  
