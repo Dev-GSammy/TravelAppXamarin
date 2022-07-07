@@ -4,9 +4,26 @@
              x:Class="TravelAppXamarin.ProfilePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to the Profile Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text = "5"
+                Margin="0,40,0,30"
+                   TextColor="DodgerBlue"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Label Text="Post(s)"
+                   Margin="0,0,0,30"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Medium"/>
+            <ListView Margin="10,10,10,10" SeparatorColor="White">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
