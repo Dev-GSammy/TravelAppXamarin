@@ -8,7 +8,14 @@
         <ListView x:Name="postListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text= "{Binding Experience}" TextColor="DodgerBlue"/>
+                    <TextCell Text= "{Binding Experience}" TextColor="DodgerBlue">
+                        <TextCell.ContextActions>
+                            <MenuItem Text="Delete"
+                                      Clicked="DeleteListItem_Clicked"
+                                      IsDestructive="True"/>
+                            
+                        </TextCell.ContextActions>
+                    </TextCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

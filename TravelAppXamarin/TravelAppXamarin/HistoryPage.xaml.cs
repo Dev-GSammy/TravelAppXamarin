@@ -31,5 +31,9 @@ namespace TravelAppXamarin
                 postListView.ItemsSource = posts;
             }
         }
+        private void DeleteListItem_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
