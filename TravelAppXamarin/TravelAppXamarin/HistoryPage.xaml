@@ -13,7 +13,6 @@
                             <MenuItem Text="Delete"
                                       Clicked="DeleteListItem_Clicked"
                                       IsDestructive="True"/>
-                            
                         </TextCell.ContextActions>
                     </TextCell>
                 </DataTemplate>

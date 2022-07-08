@@ -52,7 +52,7 @@ namespace TravelAppXamarin
 
                     Experience = ExperienceEntry.Text,
                     //AddressAmenity =
-                    AddressAmenity = datacollected.amenity,
+                    //AddressAmenity = datacollected.amenity,
                     //AddressState = SelectedVenue.state.ToString(),
                     //AddressCountry = SelectedVenue.Country.ToString()
                 };

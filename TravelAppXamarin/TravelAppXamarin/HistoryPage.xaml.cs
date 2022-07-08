@@ -17,7 +17,7 @@ namespace TravelAppXamarin
         {
             InitializeComponent();
         }
-
+        Post post = new Post();
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -31,9 +31,14 @@ namespace TravelAppXamarin
                 postListView.ItemsSource = posts;
             }
         }
-        private void DeleteListItem_Clicked(object sender, EventArgs e)
+        public void DeleteListItem_Clicked(object sender, EventArgs e)
         {
-
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                conn.CreateTable<Post>();
+                conn.Delete(post);
+                OnAppearing();
+            }
         }
     }
 }
