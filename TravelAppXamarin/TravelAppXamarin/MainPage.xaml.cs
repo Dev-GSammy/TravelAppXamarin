@@ -19,7 +19,14 @@ namespace TravelAppXamarin
             MainIcon.Source = ImageSource.FromResource("TravelAppXamarin.Assets.Images.plane.png", assembly);
 
         }
-
+        /// <summary>
+        /// This marks the temporary suspension of my work on this project. Eduardo took a quite shocking turn when he 
+        /// started teaching so fast and not explaining his actions. using classes and interfaces even I don't understand.
+        /// In any case, I promise to be back to refactor the code. Use the MVVM pattern, make the app better and
+        /// conclude my work here once and for all. Thanks for the time spent on the TravelAppXamarin.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Submitbtn_Clicked(object sender, EventArgs e)
         {
             bool isName = string.IsNullOrEmpty(NameEntry.Text);
@@ -33,6 +40,7 @@ namespace TravelAppXamarin
             {
                 Navigation.PushAsync(new HomePage());
             } 
-        }
+        }   
     }
 }
+ 
