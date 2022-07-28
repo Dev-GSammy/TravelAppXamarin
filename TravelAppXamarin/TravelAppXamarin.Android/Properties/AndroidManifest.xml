@@ -8,7 +8,7 @@
 	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-	<application android:label="TravelAppXamarin.Android" android:theme="@style/MainTheme" android:icon="@mipmap/launcher_foreground">
+	<application android:label="TravelAppXamarin.Android" android:theme="@style/MainTheme" android:icon="@mipmap/app_icon_adaptive_fore">
 		<!-- This line below must be included: the metadata, android name and api key as the value. This will prevent the map from greying out 
 		Where did he get his own android name though. Never figured that out.-->
 		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBEOfxBnu3ORw29NdrGWFY2jZjrW_M-px0" />
